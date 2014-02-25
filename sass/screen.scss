@@ -1,0 +1,124 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$content_width: 100%;
+$header_height: 400px;
+$content_area_height: 150px;
+
+%content_area {
+    height: $content_area_height;
+    min-height: $content_area_height;    
+}
+
+%left_content_area {
+    width: 50%;
+    height: 200px;
+}
+
+%right_content_area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    widows: 50%;
+    height: 200px;
+}
+
+%index_content {
+    position: relative;
+    display: inline-block;
+    width: $content_width;
+}
+
+body {
+    width: $content_width;
+    background-color: #fc3136;
+}
+
+#secondBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #00508c;
+    z-index: -1;
+}
+
+#wrapper {
+    margin: auto;
+    width: 1000px;    
+}
+
+.header {
+    @extend %index_content;
+    height: $header_height;
+    min-height: $header_height;
+    border: 1px #000000 solid;
+    
+    .logoArea {
+        @extend %left_content_area;
+        display: inline-block;
+        float: left;
+    }
+
+    .signup_pitch {
+        @extend %left_content_area;
+    }
+
+    .curious_spiel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 400px;
+        float: right;
+        border: 1px #CCFFFF dotted;
+    }
+}
+
+.info_content {
+    @extend %index_content;
+    @extend %content_area;
+    border: 1px #FFFFFF solid;
+    
+    .info_content_left {
+        @extend %left_content_area;
+    }
+
+    .info_content_right {
+        @extend %right_content_area;
+    }
+}
+
+.video_content {
+    @extend %index_content;
+    @extend %content_area;
+    border: 1px #FFFFCC solid;
+    
+    %video_area {
+        width: 33%;
+        height: 200px;
+    }
+
+    .video_area_one {
+        @extend %video_area;
+    }
+
+    .video_area_two {
+        @extend %video_area;
+    }
+
+    .video_area_three {
+        @extend %video_area;
+    }
+}
+
+.footer {
+    @extend %index_content;
+    @extend %content_area;
+    border: 1px #CCCCCC solid;
+}
