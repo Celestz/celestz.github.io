@@ -1,0 +1,26 @@
+{
+  "name": "Rumble Royale - Starter",
+  "version": "0.0.1",
+  "description": "Rumble Royale - Initial Page Concept - Revitalized",
+  "main": "index.html",
+  "keywords": [
+    "RR",
+    "Reign",
+    "Rumble",
+    "Royale"
+  ],
+  "authors": [
+    "Rumblers"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.14"
+  }
+}

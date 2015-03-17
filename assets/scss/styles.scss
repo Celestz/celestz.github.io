@@ -1,0 +1,153 @@
+//Variables
+$base-font: 'PT Sans', sans-serif;
+//Mixins
+@mixin base-font {
+  font-family: $base-font;
+}
+//OOCSS
+html {
+  @include base-font;
+  min-height: 6000px;
+  /* make sure it is at least as tall as the viewport */
+  position: relative;
+  body {
+    height: 100%;
+    background: url("../img/rr-bg.jpg") no-repeat top center fixed;
+    position: relative;
+    .container-fluid {
+      .top-nav {
+        text-transform: uppercase;
+      }
+      .sidebar {
+        min-height: 100%;
+        text-transform: uppercase;
+        width: 180px;
+        position: fixed;
+        z-index: 12;
+        top: 67px;
+        left: 40px;
+        background: linear-gradient(to right, #000 30%,transparent);
+        .nav-logo {
+          width: 180px;
+          height: 180px;
+          background: url("../img/nav-logo.png") no-repeat center top;
+        }
+        ul {
+          border-left: 1px solid #efc13a;
+          li {
+            border-bottom: 1px solid #696969;
+            &.active {
+              background: linear-gradient(to right, #696969 30%, transparent);
+              &:before {
+                content: '';
+                display: block;
+                float: left;
+                margin: 4px 5px 0 0;
+                border-top: 20px solid transparent;
+                border-bottom: 20px solid transparent;
+                border-left: 20px solid #efc13a;
+              }
+            }
+            // &:after {
+            //   content: '';
+            //   display: block;
+            //   background: url("../img/nav-splitter.png") no-repeat center bottom;
+            //   width: 151px;
+            //   height: 12px;
+            // }
+            a {
+              @include base-font;
+              color: #fff;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .content-area {
+        //EDGES
+        .tr-edge {
+          border-width: 0 0 60px 2880px;
+          border-style: solid dashed solid solid;
+        }
+        .bl-edge {
+          border-width: 60px 2880px 0 0;
+          border-style: solid dashed solid solid;
+        }
+        .br-edge {
+          border-width: 60px 0 0 2880px;
+          border-style: solid dashed solid solid;
+        }
+        .top-area {
+          padding: 40px;
+          background: #161616;
+          .tight {
+            padding: 0;
+          }
+        }
+        .generic-header {
+          text-transform: uppercase;
+          font-family: 'Open Sans Condensed', sans-serif;
+          font-weight: 700;
+          font-size: 60px;
+          color: #c7c7c7;
+          margin: 50px 0;
+        }
+        #news {
+          background: #161616;
+          height: 1200px;
+          .main-video {
+            max-width: 1080px;
+            /* you have to have a size or this method doesn't work */
+            max-height: 608px;
+            margin-right: auto;
+            margin-left: auto;
+          }
+          .news-menu {
+            text-align: center;
+            margin: 40px 0;
+            li {
+              display: inline;
+              float: none;
+              a {
+                font-size: 26px;
+                text-transform: uppercase;
+                margin: 0 15px;
+                color: #c7c7c7;
+              }
+            }
+          }
+        }
+        .news-edge {
+          border-color: #161616 transparent transparent transparent;
+        }
+        #vault {
+          height: 400px;
+          .vault-header {
+            text-transform: uppercase;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 120px;
+            color: #c7c7c7;
+            margin: 40px 0;
+          }
+          p {
+            text-transform: uppercase;
+            font-family: 'Open Sans Condensed', sans-serif;
+            color: #fff;
+            font-size: 28px;
+          }
+        }
+        .vault-edge {
+          border-color: transparent transparent #161616 transparent;
+        }
+        .vault-videos {
+          background: #161616;
+          height: 500px;
+        }
+        .vault-bottom {
+          border-color: #161616 transparent transparent transparent;
+        }
+      }
+    }
+  }
+}
