@@ -7,7 +7,6 @@ $base-font: 'PT Sans', sans-serif;
 //OOCSS
 html {
   @include base-font;
-  min-height: 6000px;
   /* make sure it is at least as tall as the viewport */
   position: relative;
   body {
@@ -15,6 +14,7 @@ html {
     background: url("../img/rr-bg.jpg") no-repeat top center fixed;
     position: relative;
     .container-fluid {
+      max-width: 2000px;
       .top-nav {
         text-transform: uppercase;
       }
@@ -25,7 +25,7 @@ html {
         position: fixed;
         z-index: 12;
         top: 67px;
-        left: 40px;
+        left: 4px;
         background: linear-gradient(to right, #000 30%,transparent);
         .nav-logo {
           width: 180px;
@@ -47,18 +47,17 @@ html {
                 border-bottom: 20px solid transparent;
                 border-left: 20px solid #efc13a;
               }
+              a {
+                color: #fff;
+              }
             }
-            // &:after {
-            //   content: '';
-            //   display: block;
-            //   background: url("../img/nav-splitter.png") no-repeat center bottom;
-            //   width: 151px;
-            //   height: 12px;
-            // }
             a {
               @include base-font;
-              color: #fff;
+              color: #4e4e4e;
               font-size: 20px;
+              &:hover {
+                color: #a7141d;
+              }
             }
           }
         }
@@ -66,19 +65,26 @@ html {
       .content-area {
         //EDGES
         .tr-edge {
-          border-width: 0 0 60px 2880px;
-          border-style: solid dashed solid solid;
+          background: linear-gradient(to top left, #161616 50% , transparent 50%);
+          /* Standard syntax (must be last) */
+          height: 100px;
+        }
+        .tl-edge {
+          background: linear-gradient(to top right, #161616 50% , transparent 50%);
+          /* Standard syntax (must be last) */
+          height: 100px;
         }
         .bl-edge {
-          border-width: 60px 2880px 0 0;
-          border-style: solid dashed solid solid;
+          background: linear-gradient(to bottom right, #161616 50% , transparent 50%);
+          /* Standard syntax (must be last) */
+          height: 100px;
         }
         .br-edge {
-          border-width: 60px 0 0 2880px;
-          border-style: solid dashed solid solid;
+          background: linear-gradient(to bottom left, #161616 50% , transparent 50%);
+          /* Standard syntax (must be last) */
+          height: 100px;
         }
         .top-area {
-          padding: 40px;
           background: #161616;
           .tight {
             padding: 0;
@@ -94,7 +100,7 @@ html {
         }
         #news {
           background: #161616;
-          height: 1200px;
+          min-height: 1200px;
           .main-video {
             max-width: 1080px;
             /* you have to have a size or this method doesn't work */
@@ -116,20 +122,12 @@ html {
               }
             }
           }
-        }
-        .news-edge {
-          border-color: #161616 transparent transparent transparent;
-        }
-        #vault {
-          height: 400px;
-          .vault-header {
-            text-transform: uppercase;
-            font-family: 'Open Sans Condensed', sans-serif;
-            font-weight: 700;
-            font-size: 120px;
-            color: #c7c7c7;
-            margin: 40px 0;
+          .newsblock {
+            margin-bottom: 20px;
           }
+        }
+        .spacer {
+          height: 400px;
           p {
             text-transform: uppercase;
             font-family: 'Open Sans Condensed', sans-serif;
@@ -137,15 +135,75 @@ html {
             font-size: 28px;
           }
         }
-        .vault-edge {
-          border-color: transparent transparent #161616 transparent;
+        .vault-header {
+          text-transform: uppercase;
+          font-family: 'Open Sans Condensed', sans-serif;
+          font-weight: 700;
+          font-size: 120px;
+          color: #c7c7c7;
+          margin: 40px 0;
         }
         .vault-videos {
           background: #161616;
-          height: 500px;
+          min-height: 500px;
         }
-        .vault-bottom {
-          border-color: #161616 transparent transparent transparent;
+        .team-area {
+          min-height: 700px;
+          background: #161616;
+          .container-fluid {
+            padding: 20px 100px;
+            .carousel-control {
+              &.left,
+              &.right {
+                background: none;
+              }
+            }
+            #team-roster {
+              .team-roster-logo {
+                height: 150px;
+                border-bottom: 1px solid #fff;
+                text-align: center;
+                top: 0;
+                position: relative;
+                margin-bottom: 40px;
+                li {
+                  display: inline;
+                  position: relative;
+                  margin: 0 20px;
+                  border: none;
+                  background: none;
+                  div {
+                    display: inline;
+                  }
+                  &.active {
+                    div {
+                      &:before {
+                        content: '';
+                        display: inline;
+                        position: absolute;
+                        margin: 4px 5px 0 0;
+                        border-right: 20px solid transparent;
+                        border-bottom: 20px solid #fff;
+                        border-left: 20px solid transparent;
+                        bottom: -80px;
+                        left: 40px;
+                      }
+                    }
+                  }
+                }
+              }
+              .right-content {
+                color: #fff;
+                h1 {
+                  font-size: 24px;
+                  text-transform: uppercase;
+                }
+                p {
+                  text-align: justify;
+                }
+              }
+            }
+          }
         }
       }
     }

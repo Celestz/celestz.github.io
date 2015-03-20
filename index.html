@@ -51,7 +51,7 @@
         <li role="presentation"><a href="#home">home</a></li>
         <li role="presentation"><a href="#news">news</a></li>
         <li role="presentation"><a href="#vault">vault</a></li>
-        <li role="presentation"><a href="#">teams</a></li>
+        <li role="presentation"><a href="#teams">teams</a></li>
         <li role="presentation"><a href="#">spin2win</a></li>
         <li role="presentation"><a href="#">forum</a></li>
         <li role="presentation"><a href="#">blog</a></li>
@@ -60,12 +60,12 @@
     <div class="row clearfix">
       <div class="col-sm-12 column tight content-area">
         <div class="row inner-content top-area" id="home">
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <div id="top-vote-area" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#top-vote-area" data-slide-to="0" class="active"></li>
+              <li data-target="#top-vote-area" data-slide-to="1"></li>
+              <li data-target="#top-vote-area" data-slide-to="2"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -91,11 +91,11 @@
             </div>
 
             <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <a class="left carousel-control" href="#top-vote-area" role="button" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <a class="right carousel-control" href="#top-vote-area" role="button" data-slide="next">
               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -104,21 +104,37 @@
         <div class="row clearfix bottom-area" id="news">
           <div class="container">
             <h1 class="text-center generic-header">
-              <span>featured news</span>
+              <span>
+                <img src="assets/img/header-news.png" />
+              </span>
             </h1>
             <div class="main-video embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Irpu-9YxLTM" frameborder="0" allowfullscreen></iframe>
             </div>
-
             <section class="news-menu clearfix">
               <ul>
-                <li><a href="#">Show All</a></li>
-                <li><a href="#">Latest News</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Blogs</a></li>
+                <li>
+                  <a href="#">
+                    <img src="assets/img/text-show.png" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/img/text-news.png" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/img/text-events.png" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/img/text-blogs.png" />
+                  </a>
+                </li>
               </ul>
             </section>
-
             <div class="col-sm-4 newsblock column">
               <div class="embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pZHRNRrm244" frameborder="0" allowfullscreen></iframe>
@@ -134,24 +150,27 @@
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zhE1Rbmw1b8" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
+            <section class="news-menu clearfix">
+              <a href="#">
+                <img src="assets/img/text-more.png" />
+              </a>
+            </section>
           </div>
         </div>
-        <div class="row bl-edge news-edge">
-        </div>
-        <div class="row" id="vault">
+        <div class="row bl-edge" id="vault"></div>
+        <div class="row spacer">
           <div class="container">
             <h1 class="text-center vault-header">
-              <span>vault</span>
+              <img src="assets/img/header-vault.png" />
             </h1>
             <p class="text-center">Lorem ipsum dolor sit amet, sit ea euismod maiorum volumus, putant iuvaret usu ei.</p>
           </div>
         </div>
-        <div class="row tr-edge vault-edge">
-        </div>
+        <div class="row tr-edge vault-edge"></div>
         <div class="row vault-videos">
           <div class="container">
             <h1 class="text-center generic-header">
-              <span>battles</span>
+              <img src="assets/img/header-battles.png" />
             </h1>
             <div class="col-sm-4 newsblock column">
               <div class="embed-responsive embed-responsive-16by9">
@@ -168,11 +187,144 @@
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/axZidqIS0ew" frameborder="0" allowfullscreen></iframe>
               </div>
             </div>
+            <h1 class="text-center generic-header">
+              <img src="assets/img/text-more.png" />
+            </h1>
           </div>
         </div>
-        <div class="row br-edge vault-bottom"></div>
+        <div class="row br-edge"></div>
+        <div class="row spacer" id="teams">
+          <div class="container">
+            <h1 class="text-center vault-header">
+              <img src="assets/img/header-teams.png" />
+            </h1>
+            <p class="text-center">List of Contenders</p>
+          </div>
+        </div>
+        <div class="row tl-edge"></div>
+        <div class="row team-area">
+          <div class="container-fluid">
+            <div id="team-roster" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="team-roster-logo carousel-indicators hidden-xs hidden-sm">
+                <li data-target="#team-roster" data-slide-to="0" class="active">
+                  <div><img src="assets/img/teams/logo/msi-evolution.png"></div>
+                </li>
+                <li data-target="#team-roster" data-slide-to="1">
+                  <div><img src="assets/img/teams/logo/medyo-badgirl.png"></div>
+                </li>
+                <li data-target="#team-roster" data-slide-to="2">
+                  <div><img src="assets/img/teams/logo/redemption.png"></div>
+                </li>
+                <li data-target="#team-roster" data-slide-to="3">
+                  <div><img src="assets/img/teams/logo/defiance.png"></div>
+                </li>
+                <li data-target="#team-roster" data-slide-to="4">
+                  <div><img src="assets/img/teams/logo/rainbow-kitties.png"></div>
+                </li>
+                <li data-target="#team-roster" data-slide-to="5">
+                  <div><img src="assets/img/teams/logo/imperium.png"></div>
+                </li>
+              </ol>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <div class="col-md-6 col-sm-12 columns">
+                    <img class="img-responsive" src="assets/img/teams/msi-evolution.jpg">
+                  </div>
+                  <div class="right-content col-md-4 col-md-offset-1 col-sm-12 columns text-center">
+                    <img src="assets/img/teams/logo/msi-evolution.png">
+                    <h1>MSI Evolution Gaming Team</h1>
+                    <p>
+                      Few teams can boast the same rich history as the MSi Evolution Gaming Team. MSi was one of the first true professional League of Legends teams in the Philippines. Back when they were known as Team WILD, they stood tall as the best team in the country,
+                      and fought for the country's name internationally as well. But since then, MSi has suffered a fall from grace, and are trying to claw back to relevance while being led by one of the best players in the country, their veteran captain:
+                      Karlo.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-6 col-sm-12 columns">
+                    <img class="img-responsive" src="assets/img/teams/medyo-badgirl.jpg">
+                  </div>
+                  <div class="right-content col-md-4 col-md-offset-1 col-sm-12 columns text-center">
+                    <img src="assets/img/teams/logo/medyo-badgirl.png">
+                    <h1>Medyo Bad Girl</h1>
+                    <p>
+                      Many think of the world of eSports to be a male dominated field. While they're not entirely wrong, Erika and her team, Medyo Bad Girl, would like to sway your views. Originating from the original Philippine all-girl team, MBG's captain envisions her team
+                      as a powerhouse of femme fatales capable of keeping up with the best of the boys. Never one to run out of cards to play, for every Jack of all trades, MBG has a Queen ready to do them one better.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-6 col-sm-12 columns">
+                    <img class="img-responsive" src="assets/img/teams/redemption.jpg">
+                  </div>
+                  <div class="right-content col-md-4 col-md-offset-1 col-sm-12 columns text-center">
+                    <img src="assets/img/teams/logo/redemption.png">
+                    <h1>Redemption</h1>
+                    <p>
+                      There are two sides to every coin. And on the coin of the now defunct Team Goddess, once a very prominent all-girls team, one side of it is Team Redemption. Created by the original makers of Team Goddess, these women defected from the group they once
+                      called family due to internal turmoil and are now hellbent on redeeming themselves and shed their tarnished image. Helping them along the way is their "small" secret who always makes very big plays.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-6 col-sm-12 columns">
+                    <img class="img-responsive" src="assets/img/teams/defiance.jpg">
+                  </div>
+                  <div class="right-content col-md-4 col-md-offset-1 col-sm-12 columns text-center">
+                    <img src="assets/img/teams/logo/defiance.png">
+                    <h1>Defiance</h1>
+                    <p>
+                      After the split of what is now Team Redemption from Goddess, the ones who stayed looked to rebuild both their roster, and identity. Now known as Team Defiance, they look to defy the odds and become their own bright luster. Though some are still angels
+                      earning their wings, the team, led by Cairi Jing, draws upon team synergy to fuel their desire to win. Don't be caught off guard, because behind the face is a fighter who fights to succeed.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-6 col-sm-12 columns">
+                    <img class="img-responsive" src="assets/img/teams/rainbow-kitties.jpg">
+                  </div>
+                  <div class="right-content col-md-4 col-md-offset-1 col-sm-12 columns text-center">
+                    <img src="assets/img/teams/logo/rainbow-kitties.png">
+                    <h1>Rainbow Kitties</h1>
+                    <p>
+                      They say looks can be deceiving. They didn't say looks can also kick your butt. The Rainbow Kitties might seem unassuming and innocent, but they have been causing waves across the LoLPH community as being one of the strongest all-girls team. Leading the
+                      way is the consensus number one female player in the Philippines: RKT Black. It might seem like RKT is always playing just for fun. But there's nothing they enjoy more than beating the pulp out of everyone in their way. When it's
+                      go time, RKT can turn from cute to cut-throat with a flip of a switch.
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="col-md-6 col-sm-12 columns">
+                    <img class="img-responsive" src="assets/img/teams/imperium.jpg">
+                  </div>
+                  <div class="right-content col-md-4 col-md-offset-1 col-sm-12 columns text-center">
+                    <img src="assets/img/teams/logo/imperium.png">
+                    <h1>Imperium Pro Team</h1>
+                    <p>
+                      From humble beginnings to living like rock stars, the members of the Imperium Pro Team have been at the top since their inception. Having once been the sponsorless, yet dominant Team Exile, IPT has now become a household name among League of Legends enthusiasts
+                      in the Philippines. Featuring a stacked roster, the team keeps skyrocketing and doesn't seem to have any plans of slowing down. For now, they remain unstoppable.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#team-roster" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#team-roster" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row bl-edge"></div>
+      </div>
     </div>
-  </div>
 </body>
 
 </html>
