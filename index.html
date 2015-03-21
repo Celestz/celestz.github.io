@@ -5,6 +5,7 @@
   <title>Rumble Royale - Reign Supreme</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="assets/components/shufflejs/dist/jquery.shuffle.modernizr.min.js"></script>
   <script src="assets/js/logic.js"></script>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -75,42 +76,75 @@
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Irpu-9YxLTM" frameborder="0" allowfullscreen></iframe>
             </div>
             <section class="news-menu clearfix">
-              <ul>
-                <li>
+              <ul id="news-filter">
+                <!-- <li>
                   <a href="#">
                     <img src="assets/img/text-show.png" />
                   </a>
-                </li>
-                <li>
-                  <a href="#">
+                </li> -->
+                <li data-group="">
+                  <a href="">
                     <img src="assets/img/text-news.png" />
                   </a>
                 </li>
-                <li>
-                  <a href="#">
+                <li data-group="event">
+                  <a href="">
                     <img src="assets/img/text-events.png" />
                   </a>
                 </li>
-                <li>
-                  <a href="#">
+                <li data-group="news">
+                  <a href="">
                     <img src="assets/img/text-blogs.png" />
                   </a>
                 </li>
               </ul>
             </section>
-            <div class="col-sm-4 newsblock column">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pZHRNRrm244" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-sm-4 newsblock column">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O2PFhlPIbvg" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
-            <div class="col-sm-4 newsblock column">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zhE1Rbmw1b8" frameborder="0" allowfullscreen></iframe>
+            <div class="container">
+              <div class="row-fluid" id="grid">
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["event"]'>
+                  <h1>Lean is a no-show</h1>
+                  <p>Yes, you heard it right.</p>
+                </div>
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["news"]'>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O2PFhlPIbvg" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["event"]'>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zhE1Rbmw1b8" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["news"]'>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pZHRNRrm244" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["event"]'>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O2PFhlPIbvg" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["news"]'>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zhE1Rbmw1b8" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["event"]'>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pZHRNRrm244" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["event"]'>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O2PFhlPIbvg" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12 grid-item column" data-groups='["news"]'>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zhE1Rbmw1b8" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
               </div>
             </div>
             <section class="news-menu clearfix">
