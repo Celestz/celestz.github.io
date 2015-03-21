@@ -17,6 +17,12 @@ html {
       max-width: 2000px;
       .top-nav {
         text-transform: uppercase;
+        .login-area {
+          height: 40px;
+          a {
+            padding-top: 5px;
+          }
+        }
       }
       .sidebar {
         min-height: 100%;
