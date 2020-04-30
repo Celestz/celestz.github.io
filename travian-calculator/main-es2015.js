@@ -237,7 +237,7 @@ class AppComponent {
         return this.summary[this.currentTribe].reduce((acc, val) => acc + val['iron'], 0);
     }
     totalCrop() {
-        return (this.summary[this.currentTribe].reduce((acc, val) => acc + val['wood'], 0) + this.cropStore);
+        return (this.summary[this.currentTribe].reduce((acc, val) => acc + val['crop'], 0) + this.cropStore);
     }
     totalSummary() {
         return (this.summary[this.currentTribe].reduce((acc, val) => acc + val['summary'], 0) + this.cropStore);

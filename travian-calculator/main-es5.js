@@ -499,7 +499,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "totalCrop",
         value: function totalCrop() {
           return this.summary[this.currentTribe].reduce(function (acc, val) {
-            return acc + val['wood'];
+            return acc + val['crop'];
           }, 0) + this.cropStore;
         }
       }, {
